@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.davimoretti.horadocafe"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.davimoretti.horadocafe"
