@@ -3,6 +3,7 @@ package com.davimoretti.horadocafe
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -58,20 +59,32 @@ class MainActivity : AppCompatActivity() {
 
             if(retorno.isSuccessful){
                 val cafe = retorno.body()
-                val id = cafe?.id
-                val nome = cafe?.nome
-                val capPorDose = cafe?.capPorDose
-                val tipo = cafe?.tipo
-                val precoCap = cafe?.precoCap
-                val imagemUrl = cafe?.imagemUrl
-                val estoque = cafe?.estoque
-                val intensidade = cafe?.intensidade
-                val dataCadastro = cafe?.dataCadastro
 
-                Log.i("info_cafessss", "cafe: $nome, $tipo, $intensidade")
+                exibirCafe(cafe)
+
             }
 
         }
 
     }
+
+    private suspend fun exibirCafe(cafe: Cafe?){
+        val id = cafe?.id
+        val nome = cafe?.nome
+        val capPorDose = cafe?.capPorDose
+        val tipo = cafe?.tipo
+        val precoCap = cafe?.precoCap
+        val imagemUrl = cafe?.imagemUrl
+        val estoque = cafe?.estoque
+        val intensidade = cafe?.intensidade
+        val dataCadastro = cafe?.dataCadastro
+
+
+        val exiCafe = "Cafe: $nome \n Tipo: $tipo ;"
+
+        val text: TextView = findViewById(R.id.TW_cafe)
+        text.text = exiCafe
+
+    }
+
 }

@@ -8,24 +8,37 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OLAAA HEHEHEHEHEHE"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/TW_cafe"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="67dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/BT_Teste"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:constraint_referenced_ids="TW_cafe" />
+
+
     <Button
+        android:id="@+id/BT_Teste"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TESTE"
+        android:layout_marginBottom="68dp"
         android:onClick="testeClick"
-        android:id="@+id/BT_Teste"
+        android:text="TESTE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.566" />
+        app:layout_constraintTop_toBottomOf="@+id/TW_cafe"
+        app:layout_constraintVertical_bias="0.9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
