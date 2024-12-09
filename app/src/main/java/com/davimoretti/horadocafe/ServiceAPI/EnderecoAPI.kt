@@ -6,6 +6,9 @@ import retrofit2.http.GET
 
 interface EnderecoAPI {
 
-    @GET("Cafes/1")
+    @GET("Cafes/2")
     suspend fun getCafeId() : Response<Cafe>
+
+    @GET("Cafes")
+    suspend fun getCafe() : Response<List<Cafe>>
 }

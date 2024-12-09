@@ -3,7 +3,6 @@ package com.davimoretti.horadocafe.model
 import java.time.LocalDateTime
 
 data class Cafe(
-
 val id: Int,
 val nome: String,
 val capPorDose: Int,
