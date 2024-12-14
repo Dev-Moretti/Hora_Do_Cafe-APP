@@ -103,6 +103,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private suspend fun exibirCafe(cafe: Cafe?){
+
         val id = cafe?.id
         val nome = cafe?.nome
         val capPorDose = cafe?.capPorDose
@@ -114,10 +115,11 @@ class MainActivity : AppCompatActivity() {
         val dataCadastro = cafe?.dataCadastro
 
 
-        val exiCafe = "Cafe: $nome \n Tipo: $tipo ;"
+//        val textNome: TextView = findViewById(R.id.TW_cafe)
+        val textTipo: TextView = findViewById(R.id.TW_cafe)
 
-        val text: TextView = findViewById(R.id.TW_cafe)
-        text.text = exiCafe
+//        textNome.text = nome
+        textTipo.text = intensidade
 
     }
 
