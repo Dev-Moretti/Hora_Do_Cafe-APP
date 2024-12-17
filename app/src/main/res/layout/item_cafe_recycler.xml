@@ -17,4 +17,34 @@
         android:textColor="#000"
         android:background="#FFF" />
 
+    <TextView
+        android:id="@+id/tvCafeTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="16dp"
+        android:text=""
+        android:textColor="#000"
+        android:background="#FFF" />
+
+    <TextView
+        android:id="@+id/tvCafeIntensidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="16dp"
+        android:text=""
+        android:textColor="#000"
+        android:background="#FFF" />
+
+    <TextView
+        android:id="@+id/tvCafeEstoque"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="16dp"
+        android:text=""
+        android:textColor="#000"
+        android:background="#FFF" />
+
 </androidx.cardview.widget.CardView>

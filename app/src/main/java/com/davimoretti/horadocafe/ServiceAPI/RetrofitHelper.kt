@@ -4,6 +4,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+<<<<<<< HEAD
 
 
 object RetrofitClient {
@@ -35,3 +36,13 @@ object RetrofitClient {
 //    }
 //
 //}
+=======
+class RetrofitHelper {
+    companion object {
+        val retrofit = Retrofit.Builder()
+            .baseUrl("http://davicafeservices.ddns.net:5168/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
+}
+>>>>>>> a54daa1825575ead276fbc3a8cf3c04e129384d7
