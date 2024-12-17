@@ -35,7 +35,8 @@ class MainActivity : AppCompatActivity() {
         //parte nova com chat gpt
 
         val tokenRepository = TokenAPI(this)
-        val retrofit = RetrofitClient.getClient("http://davicafeservices.ddns.net:5168/", tokenRepository)
+        val retrofit =
+            RetrofitClient.getClient("http://davicafeservices.ddns.net:5168/", tokenRepository)
         apiService = retrofit.create(EnderecoAPI::class.java)
         authManager = AuthManager(apiService, this)
 
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun testeClick(view: View) {
-       CoroutineScope(Dispatchers.IO).launch {
+        CoroutineScope(Dispatchers.IO).launch {
 
         }
 
@@ -61,73 +62,10 @@ class MainActivity : AppCompatActivity() {
 
         // Chama a função suspensa usando CoroutineScope
         CoroutineScope(Dispatchers.Main).launch {
-           // val cafes = getCafes() // Chama a função suspensa para obter os cafés
-           // recyclerView.adapter = CafeAdapter(cafes)
+            // val cafes = getCafes() // Chama a função suspensa para obter os cafés
+            // recyclerView.adapter = CafeAdapter(cafes)
         }
     }
 
-<<<<<<< HEAD
-
-
-
-=======
-    private suspend fun getCafes(): List<Cafe> {
-
-        val enderecoAPI = retrofit.create(EnderecoAPI::class.java)
-
-        return try {
-            val response = enderecoAPI.getCafe()
-
-            if (response.isSuccessful && response.body() != null) {
-                response.body()!! // Para retorno do tipo List<Cafe>
-            } else {
-                emptyList()
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Log.i("info_cafe", "Erro ao obter lista de cafés")
-            emptyList()
-        }
-    }
-
-    private suspend fun exibirCafe(cafe: Cafe?){
-
-        val id = cafe?.id
-        val nome = cafe?.nome
-        val capPorDose = cafe?.capPorDose
-        val tipo = cafe?.tipo
-        val precoCap = cafe?.precoCap
-        val imagemUrl = cafe?.imagemUrl
-        val estoque = cafe?.estoque
-        val intensidade = cafe?.intensidade
-        val dataCadastro = cafe?.dataCadastro
-
-
-//        val textNome: TextView = findViewById(R.id.TW_cafe)
-        val textTipo: TextView = findViewById(R.id.TW_cafe)
-
-//        textNome.text = nome
-        textTipo.text = intensidade
->>>>>>> a54daa1825575ead276fbc3a8cf3c04e129384d7
-
-
-//    private suspend fun getCafes(): List<Cafe> {
-//
-//        val enderecoAPI = retrofit.create(EnderecoAPI::class.java)
-//
-//        return try {
-//            val response = enderecoAPI.getCafe()
-//
-//            if (response.isSuccessful && response.body() != null) {
-//                response.body()!! // Para retorno do tipo List<Cafe>
-//            } else {
-//                emptyList()
-//            }
-//        } catch (e: Exception) {
-//            e.printStackTrace()
-//            Log.i("info_cafe", "Erro ao obter lista de cafés")
-//            emptyList()
-//        }
-//    }
 
 }
