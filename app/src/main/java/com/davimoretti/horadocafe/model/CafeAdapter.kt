@@ -21,7 +21,7 @@ class CafeAdapter(private val cafes: List<Cafe>) : RecyclerView.Adapter<CafeAdap
     override fun onBindViewHolder(holder: CafeViewHolder, position: Int) {
         val cafe = cafes[position]
         holder.tvCafeName.text = cafe.nome // Substitua conforme o modelo do seu objeto
-        holder.tvCafeName.text + cafe.tipo
+
     }
 
     override fun getItemCount(): Int = cafes.size

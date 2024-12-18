@@ -33,38 +33,40 @@ class MainActivity : AppCompatActivity() {
         }
 
         //parte nova com chat gpt
+    }
+
+    fun testeClick(view: View) {
+        CoroutineScope(Dispatchers.IO).launch {
+        }
 
         val tokenRepository = TokenAPI(this)
-        val retrofit =
-            RetrofitClient.getClient("http://davicafeservices.ddns.net:5168/", tokenRepository)
+        val retrofit = RetrofitClient.getClient("http://davicafeservices.ddns.net:5168/", tokenRepository)
+
         apiService = retrofit.create(EnderecoAPI::class.java)
         authManager = AuthManager(apiService, this)
 
         lifecycleScope.launch {
-            val loggedIn = authManager.login("Davi", "DaviCafe@")
+            val loggedIn = authManager.login("Davi", "DaviCafe1825")
             if (loggedIn) {
-                val cafes = apiService.getCafe("Bearer ${authManager.getToken()}")
+                val token = authManager.getToken()
+                println("meu token = $token")
+                val cafes = apiService.getCafe("Bearer $token")
                 println(cafes)
             } else {
                 println("Falha na autenticação.")
             }
         }
 
-    }
 
-    fun testeClick(view: View) {
-        CoroutineScope(Dispatchers.IO).launch {
 
-        }
-
-        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-
-        // Chama a função suspensa usando CoroutineScope
-        CoroutineScope(Dispatchers.Main).launch {
-            // val cafes = getCafes() // Chama a função suspensa para obter os cafés
-            // recyclerView.adapter = CafeAdapter(cafes)
-        }
+//        val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
+//        recyclerView.layoutManager = LinearLayoutManager(this)
+//
+//        // Chama a função suspensa usando CoroutineScope
+//        CoroutineScope(Dispatchers.Main).launch {
+//            // val cafes = getCafes() // Chama a função suspensa para obter os cafés
+//            // recyclerView.adapter = CafeAdapter(cafes)
+//        }
     }
 
 
