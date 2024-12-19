@@ -48,10 +48,9 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val loggedIn = authManager.login("Davi", "DaviCafe1825")
             if (loggedIn) {
-                val token = authManager.getToken()
-                println("meu token = $token")
-                val cafes = apiService.getCafe("Bearer $token")
-                println(cafes)
+               val cafes = apiService.getCafe()
+                println("Resposta: " + cafes.message())
+                println(cafes.body())
             } else {
                 println("Falha na autenticação.")
             }

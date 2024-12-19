@@ -15,10 +15,10 @@ interface EnderecoAPI {
 
 
     @GET("api/Cafes/2")
-    suspend fun getCafeId(@Header("Authorization") token: String) : Response<Cafe>
+    suspend fun getCafeId() : Response<Cafe>
 
 
     @GET("api/Cafes")
-    suspend fun getCafe(@Header("Authorization") token: String) : Response<List<Cafe>>
+    suspend fun getCafe(): Response<List<Cafe>>
 
 }

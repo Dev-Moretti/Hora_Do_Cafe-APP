@@ -1,9 +1,6 @@
 package com.davimoretti.horadocafe.ServiceAPI
 
 import android.content.Context
-import okhttp3.OkHttpClient
-import okhttp3.Response
-import okhttp3.logging.HttpLoggingInterceptor
 
 
 data class AuthAPIRequest(
@@ -23,7 +20,6 @@ class AuthManager(private val apiService: EnderecoAPI, context: Context) {
           return try {
                val response = apiService.authenticate(AuthAPIRequest(user, senha))
                tokenRepository.saveToken(response.token)
-               println("Token obtido: ${tokenRepository.getToken()}")
                true
           } catch (e: Exception) {
                e.printStackTrace()
