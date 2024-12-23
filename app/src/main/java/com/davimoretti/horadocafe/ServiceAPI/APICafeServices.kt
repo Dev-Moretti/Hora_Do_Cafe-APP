@@ -4,11 +4,10 @@ import com.davimoretti.horadocafe.model.Cafe
 import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.POST
 
 
-interface EnderecoAPI {
+interface APICafeServices {
 
     @POST("api/Auth")
     suspend fun authenticate(@Body authAPIRequest: AuthAPIRequest): AuthAPIResponse

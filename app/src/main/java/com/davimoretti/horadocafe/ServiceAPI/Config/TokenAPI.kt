@@ -1,4 +1,4 @@
-package com.davimoretti.horadocafe.ServiceAPI
+package com.davimoretti.horadocafe.ServiceAPI.Config
 
 import android.content.Context
 import android.content.SharedPreferences

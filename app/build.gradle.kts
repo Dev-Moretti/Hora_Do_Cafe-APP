@@ -42,6 +42,9 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.11.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
+    implementation ("androidx.recyclerview:recyclerview:1.3.1")
+    implementation ("com.google.android.material:material:1.9.0")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

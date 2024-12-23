@@ -9,7 +9,7 @@ val capPorDose: Int,
 val tipo: String,
 val precoCap: Double,
 val imagemUrl: String,
-val estoque: Double,
+val estoque: Int,
 val intensidade: String,
 val dataCadastro: LocalDateTime
 )

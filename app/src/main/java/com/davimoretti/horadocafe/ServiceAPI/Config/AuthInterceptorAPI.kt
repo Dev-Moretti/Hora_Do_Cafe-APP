@@ -1,4 +1,4 @@
-package com.davimoretti.horadocafe.ServiceAPI
+package com.davimoretti.horadocafe.ServiceAPI.Config
 
 import okhttp3.Interceptor
 import okhttp3.Response

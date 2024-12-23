@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="snackbar_connected">#219027</color>
+    <color name="snackbar_disconnected">#F0291A</color>
+    <color name="button_atualizar">#0D92F8</color>
+
 </resources>
